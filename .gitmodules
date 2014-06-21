@@ -1,3 +1,6 @@
 [submodule "vendor/bootstrap"]
 	path = vendor/bootstrap
 	url = git@github.com:twbs/bootstrap.git
+[submodule "vendor/bootswatch"]
+	path = vendor/bootswatch
+	url = git@github.com:thomaspark/bootswatch.git
