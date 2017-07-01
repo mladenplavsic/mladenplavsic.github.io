@@ -1,0 +1,110 @@
+@animationDuration: 40s;
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #5c94fc;
+}
+
+#world {
+    flex: 1 0 auto;
+
+    & + footer {
+        background-image: url("src/img/brick.png");
+    }
+
+}
+
+section,
+footer {
+    padding: 30px 50px;
+}
+
+.navbar + * {
+    margin-top: 54px;
+}
+
+#header {
+    text-align: center;
+
+    img {
+        background: #5385e2;
+        border: 10px solid #426bb5;
+    }
+
+    h1 {
+        color: #fff;
+        font-size: 64px;
+        font-weight: bold;
+        text-shadow: -1px -1px 0 #5c94fc, 1px -1px 0 #5c94fc, -1px 1px 0 #5c94fc, 1px 1px 0 #5c94fc;
+    }
+
+}
+
+/* clouds */
+#clouds {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    //transform: scale(.2); box-shadow: 0 0 10px red;
+
+    .cloud {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: -1;
+        margin-left: 100%;
+        animation: clouds @animationDuration linear infinite;
+        //box-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff;
+
+        &.cloud-1 {
+            background: url("src/img/cloud_1.png");
+            width: 64px;
+            height: 48px;
+
+            &.cloud-1:nth-child(1) {
+                top: 10%;
+            }
+            &.cloud-1:nth-child(2) {
+                top: 30%;
+                animation-delay: @animationDuration*4/6;
+            }
+            &.cloud-1:nth-child(3) {
+                top: 50%;
+                animation-delay: @animationDuration*2/6;
+            }
+        }
+
+        &.cloud-2 {
+            background: url("src/img/cloud_2.png");
+            width: 96px;
+            height: 48px;
+
+            &.cloud-2:nth-child(4) {
+                top: 20%;
+                animation-delay: @animationDuration*3/6;
+            }
+            &.cloud-2:nth-child(5) {
+                top: 40%;
+                animation-delay: @animationDuration*1/6;
+            }
+            &.cloud-2:nth-child(6) {
+                top: 60%;
+                animation-delay: @animationDuration*5/6;
+            }
+        }
+
+    }
+
+}
+
+@keyframes clouds {
+    0% {margin-left: 100%;}
+    100% {margin-left: -100%;}
+}

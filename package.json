@@ -1,0 +1,25 @@
+{
+  "name": "mladenplavsic.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mladenplavsic/mladenplavsic.github.io.git"
+  },
+  "author": "Mladen Plavšić <mladen.plavsic@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://mladenplavsic.github.io",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-base64": "^0.1.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-inject": "^4.2.0",
+    "gulp-inline-source": "^3.0.0",
+    "gulp-less": "^3.3.0",
+    "run-sequence": "^1.2.2"
+  }
+}
