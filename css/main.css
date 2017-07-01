@@ -1,25 +1,23 @@
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-    position: relative;
-    min-height: 100%;
-}
-body {
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;
-}
+section,
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 60px;
+    padding: 30px 50px;
 }
 
+.navbar + * {
+    margin-top: 54px;
+}
 
-/* Custom page CSS
--------------------------------------------------- */
+#header {
+    text-align: center;
+    background-color: #00bff3;
+}
 
-body > .container {
-    padding: 80px 15px 0;
+#header img {
+    background: rgba(0,0,0,0.1);
+}
+
+#header h1 {
+    color: #fff;
+    font-size: 64px;
+    font-weight: bold;
 }
