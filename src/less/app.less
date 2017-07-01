@@ -8,7 +8,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background-color: #5c94fc;
+    background-color: @color_sky;
     font-family: 'Press Start 2P', cursive;
 }
 
@@ -36,7 +36,7 @@ footer {
     color: #fff;
 
     img {
-        background: @color_sky;
+        background: darken(@color_sky, 3%);
         border: 10px solid #426bb5;
     }
 
@@ -44,11 +44,11 @@ footer {
         color: #fff;
         font-size: 48px;
         font-weight: bold;
-        text-shadow: -1px -1px 0 #5c94fc, 1px -1px 0 #5c94fc, -1px 1px 0 #5c94fc, 1px 1px 0 #5c94fc;
+        text-shadow: 3px 3px 0 #000, -1px -1px 0 #5c94fc, 1px -1px 0 #5c94fc, -1px 1px 0 #5c94fc, 1px 1px 0 #5c94fc;
     }
 
     p {
-        text-shadow: -1px -1px 0 #5c94fc, 1px -1px 0 #5c94fc, -1px 1px 0 #5c94fc, 1px 1px 0 #5c94fc;
+        text-shadow: 2px 2px 0 #000, -1px -1px 0 #5c94fc, 1px -1px 0 #5c94fc, -1px 1px 0 #5c94fc, 1px 1px 0 #5c94fc;
     }
 
 }
