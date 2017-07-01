@@ -1,4 +1,5 @@
-@animationDuration: 40s;
+@color_sky: #5D94FB;
+@animation_duration: 40s;
 
 html, body {
     height: 100%;
@@ -8,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #5c94fc;
+    font-family: 'Press Start 2P', cursive;
 }
 
 #world {
@@ -34,14 +36,18 @@ footer {
     color: #fff;
 
     img {
-        background: #5385e2;
+        background: @color_sky;
         border: 10px solid #426bb5;
     }
 
     h1 {
         color: #fff;
-        font-size: 64px;
+        font-size: 48px;
         font-weight: bold;
+        text-shadow: -1px -1px 0 #5c94fc, 1px -1px 0 #5c94fc, -1px 1px 0 #5c94fc, 1px 1px 0 #5c94fc;
+    }
+
+    p {
         text-shadow: -1px -1px 0 #5c94fc, 1px -1px 0 #5c94fc, -1px 1px 0 #5c94fc, 1px 1px 0 #5c94fc;
     }
 
@@ -62,7 +68,7 @@ footer {
         position: absolute;
         z-index: -1;
         margin-left: 100%;
-        animation: clouds @animationDuration linear infinite;
+        animation: clouds @animation_duration linear infinite;
         //box-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff;
 
         &.cloud-1 {
@@ -75,11 +81,11 @@ footer {
             }
             &.cloud-1:nth-child(2) {
                 top: 30%;
-                animation-delay: @animationDuration*4/6;
+                animation-delay: @animation_duration*4/6;
             }
             &.cloud-1:nth-child(3) {
                 top: 50%;
-                animation-delay: @animationDuration*2/6;
+                animation-delay: @animation_duration*2/6;
             }
         }
 
@@ -90,20 +96,24 @@ footer {
 
             &.cloud-2:nth-child(4) {
                 top: 20%;
-                animation-delay: @animationDuration*3/6;
+                animation-delay: @animation_duration*3/6;
             }
             &.cloud-2:nth-child(5) {
                 top: 40%;
-                animation-delay: @animationDuration*1/6;
+                animation-delay: @animation_duration*1/6;
             }
             &.cloud-2:nth-child(6) {
                 top: 60%;
-                animation-delay: @animationDuration*5/6;
+                animation-delay: @animation_duration*5/6;
             }
         }
 
     }
 
+}
+
+.label-default {
+    background-color: #CC4B09;
 }
 
 @keyframes clouds {
