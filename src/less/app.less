@@ -38,13 +38,24 @@ footer {
     img {
         background: darken(@color_sky, 3%);
         border: 10px solid #426bb5;
+        max-width: 75%;
+
+        @media (min-width: 768px) {
+            max-width: none;
+        }
+
     }
 
     h1 {
         color: #fff;
-        font-size: 48px;
+        font-size: 40px;
         font-weight: bold;
         text-shadow: 3px 3px 0 #000, -1px -1px 0 #5c94fc, 1px -1px 0 #5c94fc, -1px 1px 0 #5c94fc, 1px 1px 0 #5c94fc;
+
+        @media (min-width: 768px) {
+            font-size: 48px;
+        }
+
     }
 
     p {
