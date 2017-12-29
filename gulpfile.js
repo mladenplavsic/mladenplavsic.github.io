@@ -25,7 +25,7 @@ gulp.task('build:less', function () {
 
 paths.html = './src/index.html';
 
-gulp.task('default', ['build'])
+gulp.task('default', ['build']);
 
 gulp.task('build', [
     'build:less'
