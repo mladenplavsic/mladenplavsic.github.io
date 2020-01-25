@@ -1,12 +1,13 @@
-var gulp = require('gulp');
-var less = require('gulp-less');
-var cssnano = require('gulp-cssnano');
-var htmlmin = require('gulp-htmlmin');
-var inlinesource = require('gulp-inline-source');
-var imagemin = require('gulp-imagemin');
 var base64 = require('gulp-base64');
-var inject = require('gulp-inject');
 var concat = require('gulp-concat');
+var cssnano = require('gulp-cssnano');
+var gls = require('gulp-live-server');
+var gulp = require('gulp');
+var htmlmin = require('gulp-htmlmin');
+var imagemin = require('gulp-imagemin');
+var inject = require('gulp-inject');
+var inlinesource = require('gulp-inline-source');
+var less = require('gulp-less');
 var runSequence = require('run-sequence');
 
 var paths = {};
@@ -44,9 +45,10 @@ gulp.task('watch', function () {
     return runSequence(
         'build',
         [
-             'watch:less'
-            , 'watch:html'
-        ]
+            'watch:less',
+            'watch:html',
+        ],
+        'serve'
     )
 });
 
@@ -56,4 +58,9 @@ gulp.task('watch:less', function () {
 
 gulp.task('watch:html', function () {
     gulp.watch(paths.html, ['build']);
+});
+
+gulp.task('serve', function() {
+    var server = gls.static(['.']);
+    server.start();
 });

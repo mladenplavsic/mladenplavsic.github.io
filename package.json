@@ -21,5 +21,8 @@
     "gulp-inline-source": "^3.0.0",
     "gulp-less": "^3.3.0",
     "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "gulp-live-server": "0.0.31"
   }
 }
