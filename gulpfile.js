@@ -1,7 +1,6 @@
 var base64 = require('gulp-base64');
 var concat = require('gulp-concat');
 var cssnano = require('gulp-cssnano');
-var gls = require('gulp-live-server');
 var gulp = require('gulp');
 var htmlmin = require('gulp-htmlmin');
 var imagemin = require('gulp-imagemin');
@@ -48,7 +47,6 @@ gulp.task('watch', function () {
             'watch:less',
             'watch:html',
         ],
-        'serve'
     )
 });
 
@@ -58,9 +56,4 @@ gulp.task('watch:less', function () {
 
 gulp.task('watch:html', function () {
     gulp.watch(paths.html, ['build']);
-});
-
-gulp.task('serve', function() {
-    var server = gls.static(['.']);
-    server.start();
 });

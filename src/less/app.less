@@ -48,12 +48,13 @@ body {
 
     & + footer {
         background-image: url("src/img/ground.png");
+        border-top: 2px solid #05181d;
     }
 }
 
 section,
 footer {
-    padding: 30px 50px;
+    padding: 30px 40px;
 }
 
 .navbar + * {
@@ -68,7 +69,7 @@ footer {
     color: #fff;
 
     #head {
-        max-width: 75%;
+        max-width: 60%;
         position: relative;
 
         img {
@@ -100,18 +101,22 @@ footer {
 
     h1 {
         color: #fff;
-        font-size: 40px;
+        font-size: 21px;
         font-weight: bold;
         text-shadow: 3px 3px 0 #000, -1px -1px 0 #0073be, 1px -1px 0 #0073be, -1px 1px 0 #0073be, 1px 1px 0 #0073be;
 
         @media (min-width: 768px) {
-            font-size: 48px;
+            font-size: 46px;
         }
-
     }
 
     p {
         text-shadow: 2px 2px 0 #000, -1px -1px 0 #0073be, 1px -1px 0 #0073be, -1px 1px 0 #0073be, 1px 1px 0 #0073be;
+        font-size: 14px;
+
+        @media (min-width: 768px) {
+            font-size: 16px;
+        }
     }
 }
 
@@ -174,8 +179,13 @@ footer {
 
 .label-default {
     background-color: #CC4B09;
-    padding: 10px;
-    line-height: 4;
+    padding: 6px;
+    line-height: 3;
+
+    @media (min-width: 768px) {
+        padding: 10px;
+        line-height: 4;
+    }
 }
 
 @keyframes clouds {
